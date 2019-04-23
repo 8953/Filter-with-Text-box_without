@@ -1,0 +1,102 @@
+<html>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+<script type='text/javascript' src="ipl.js"></script>
+<style type="text/css">
+    #c1{
+        color:orange;
+    }
+    #te1
+    {
+        width: 500px;
+        height: 40px;
+        border-color: red yellow orange blue ;
+        text-orientation: right;
+        font-size: 30px;
+        color: red;
+        text-align: center;
+    }
+    #a1:hover
+    {
+        font-size: 40px;
+        color:red;
+    }
+    #na
+    {
+        background-color: silver;
+        border-color: red yellow orange blue ;
+        text-orientation: right;
+        font-size: 40px;
+       
+    margin-top: 150px;
+       
+    }
+    #a1
+    {
+        font-size: 20px;
+        
+    }
+    #po
+    {
+    border-color: red yellow orange blue ;
+    font-size: 35px;
+    color: white;
+     margin-left: 300px;
+    }
+
+#pl
+{
+    color: black;
+}
+    body
+    {
+        background-position:100% 80%;
+    }
+    #m1{
+        background-color: white;
+        margin-top: -20px;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    #n1
+    {
+        margin-left: -20px;
+        margin-right: -20px;
+        margin-top: 10px;
+        background-color: #f3f0dd;
+
+    }
+</style>
+
+
+    <body id="n1"><center>
+    <div id="m1">
+    <h1 id="c1"><i>For Species Enter<mark> human</mark> for human beings or Enter <mark>other</mark> </i><h1>
+        <h2 id="c1"><i>For Date of birth Enter <mark>30 BBY to 5 ABY</mark> or Enter <mark>Not between 30 BBY to 5 ABY</mark></i>
+            <h2>
+            <h2 id="c1"><i> For Epsidoe Enter <mark> episode 1..so on</mark></i><h2>
+                </div></center>
+   <div ng-app="myApp" ng-controller="menuCtrl"><center>
+    <div class="col-md-4">
+    <input type="text" ng-model="h1" id="te1"  placeholder="Filter" autocomplete="off">
+    
+        <p ng-repeat="x in titles | filter:h1">
+            <a href="#na" ng-target="_blank" id="a1"  ng-click="select(x)" > {{ x.name }}</a>
+        </p>
+  
+    <!--h3 class="food">Beverage</h3>
+    <ul >
+        <li ng-repeat="x in titles | filter:isBeverage">
+            <a href="" ng-click="select(x)"> {{ x.title }}</a>
+        </li>
+    </ul-->
+</div></center>
+
+<div id="na">
+<p id="po"><strong id="pl">Name : </strong>{{selectedItem.name}}</p>
+<p id="po"><strong id="pl">Species : </strong>{{selectedItem.mode}}</p>
+<p id="po"><strong id="pl">Movies : </strong>{{selectedItem.show}}</p>
+<p id="po"><strong id="pl">Spaceships : </strong>{{selectedItem.space}}</p>
+</div>
+</div> 
+</body>
